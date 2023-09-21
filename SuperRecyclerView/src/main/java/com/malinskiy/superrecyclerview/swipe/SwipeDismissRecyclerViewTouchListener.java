@@ -23,9 +23,6 @@ import com.nineoldandroids.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.graphics.Rect;
 import android.os.SystemClock;
-import android.support.annotation.NonNull;
-import android.support.v4.view.MotionEventCompat;
-import android.support.v7.widget.RecyclerView;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
@@ -40,6 +37,10 @@ import static com.nineoldandroids.view.ViewHelper.setAlpha;
 import static com.nineoldandroids.view.ViewHelper.setTranslationX;
 import static com.nineoldandroids.view.ViewPropertyAnimator.animate;
 
+import androidx.annotation.NonNull;
+import androidx.core.view.MotionEventCompat;
+import androidx.recyclerview.widget.RecyclerView;
+
 public class SwipeDismissRecyclerViewTouchListener implements View.OnTouchListener {
     public static final int INVALID_POSITION = -1;
 
@@ -50,7 +51,7 @@ public class SwipeDismissRecyclerViewTouchListener implements View.OnTouchListen
     private long mAnimationTime;
 
     // Fixed properties
-    private RecyclerView     mRecyclerView;
+    private RecyclerView mRecyclerView;
     private DismissCallbacks mCallbacks;
     private int mViewWidth = 1; // 1 and not 0 to prevent dividing by zero
 

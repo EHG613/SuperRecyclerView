@@ -3,15 +3,19 @@ apply from: 'buildsystem/dependencies.gradle'
 buildscript {
     apply from: 'buildsystem/dependencies.gradle'
     repositories {
+        google()
+        mavenCentral()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.0-beta3'
+        classpath "com.android.tools.build:gradle:7.2.1"
     }
 }
 
 allprojects {
     repositories {
+        google()
+        mavenCentral()
         jcenter()
     }
 }

@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion versions.compileSdk
-    buildToolsVersion versions.buildTools
 
     defaultConfig {
         minSdkVersion versions.minSdk
@@ -20,11 +19,13 @@ android {
 }
 
 dependencies {
-    compile project(':SuperRecyclerView')
+    implementation project(':SuperRecyclerView')
 
-    compile libraries.supportAppCompat
-    compile libraries.supportDesign
-    compile libraries.supportCardView
-    compile libraries.materialicons
-    compile libraries.stickyheaders
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+//    implementation libraries.supportDesign
+//    implementation libraries.supportCardView
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation libraries.materialicons
+//    implementation libraries.stickyheaders
 }

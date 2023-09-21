@@ -2,12 +2,13 @@ package com.malinskiy.superrecyclerview.sample;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.LinearLayoutManager;
 import android.widget.Toast;
 
-import com.eowise.recyclerview.stickyheaders.StickyHeadersBuilder;
-import com.eowise.recyclerview.stickyheaders.StickyHeadersItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+//import com.eowise.recyclerview.stickyheaders.StickyHeadersBuilder;
+//import com.eowise.recyclerview.stickyheaders.StickyHeadersItemDecoration;
 import com.malinskiy.superrecyclerview.SuperRecyclerView;
 
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ public class HeaderAdapterActivity extends Activity implements SwipeRefreshLayou
     private StringListAdapter           mAdapter;
     private String[]                    rocks;
     private String[]                    classics;
-    private StickyHeadersItemDecoration top;
+//    private StickyHeadersItemDecoration top;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,14 +40,14 @@ public class HeaderAdapterActivity extends Activity implements SwipeRefreshLayou
         data.addAll(Arrays.asList(rocks));
         mAdapter = new StringListAdapter(data);
         mAdapter.setHasStableIds(true);
-        top = new StickyHeadersBuilder()
-                .setAdapter(mAdapter)
-                .setRecyclerView(mRecycler.getRecyclerView())
-                .setStickyHeadersAdapter(new InitialHeaderAdapter(data))
-                .build();
-
-        mRecycler.setAdapter(mAdapter);
-        mRecycler.addItemDecoration(top);
+//        top = new StickyHeadersBuilder()
+//                .setAdapter(mAdapter)
+//                .setRecyclerView(mRecycler.getRecyclerView())
+//                .setStickyHeadersAdapter(new InitialHeaderAdapter(data))
+//                .build();
+//
+//        mRecycler.setAdapter(mAdapter);
+//        mRecycler.addItemDecoration(top);
     }
 
     @Override

@@ -2,7 +2,6 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion versions.compileSdk
-    buildToolsVersion versions.buildTools
 
     defaultConfig {
         minSdkVersion versions.minSdk
@@ -19,8 +18,10 @@ android {
 }
 
 dependencies {
-    compile libraries.supportRecyclerView
-    compile libraries.nineOldAndroids
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    // compile libraries.supportRecyclerView
+    implementation libraries.nineOldAndroids
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 }
 
 if (JavaVersion.current().isJava8Compatible()) {
@@ -31,4 +32,4 @@ if (JavaVersion.current().isJava8Compatible()) {
     }
 }
 
-apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
+// apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
